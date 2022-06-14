@@ -7,15 +7,13 @@ import About from '..';
 afterEach(cleanup);
 
 describe('About component', () => {
-	// render test
-	test("renders", () => {
-		render(<About />);
-	});
-
-	// snapshot test
-	test("matches snapshot DOM node structure", () => {
-		const { asFragment } = render(<About />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
+  it('renders', () => {
+    render(<About />);
+  });
+  
+  it('matches snapshot DOM node structure', () => {
+    const { asFragment } = render(<About />);
+    
+    expect(asFragment()).toMatchSnapshot();
+  });
 })
